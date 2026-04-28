@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoliDoc LGA — Centro Medico Polispecialistico | Partinico</title>
+  <meta name="description" content="PoliDoc LGA è il Centro Medico Polispecialistico di Partinico. Cardiologia, Dietologia, Medicina Generale, Oculistica. Via Lagrange 1, tel. 091 564 9099.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="assets/logo-full.png" alt="PoliDoc LGA" onerror="this.style.display='none'">
+      <div class="logo-text" id="logo-fallback">
+        <strong>PoliDoc LGA</strong>
+        <span>Centro Medico Polispecialistico</span>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="contattaci.html">Contattaci</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>La tua salute,<br>la nostra priorità</h1>
+    <p>Centro Medico Polispecialistico a Partinico. Professionisti qualificati, visite specialistiche e diagnosi accurate per tutta la famiglia.</p>
+    <a href="contattaci.html" class="btn">Prenota una visita</a>
+    <a href="tel:+390915649099" class="btn btn-outline">☎ 091 564 9099</a>
+  </section>
+
+  <!-- SERVIZI -->
+  <section class="services">
+    <div class="section-inner">
+      <h2 class="section-title">Le nostre specialità</h2>
+      <p class="section-sub">Équipe di specialisti al tuo servizio</p>
+      <div class="divider"></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">❤️</div>
+          <h3>Cardiologia</h3>
+          <p>Visita cardiologica, ECG, ecocardiogramma e monitoraggio pressorio per la salute del tuo cuore.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🥗</div>
+          <h3>Dietologia</h3>
+          <p>Piani alimentari personalizzati per perdita di peso, patologie metaboliche e benessere nutrizionale.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🩺</div>
+          <h3>Medicina Generale</h3>
+          <p>Consulenza medica generale, prevenzione, gestione delle patologie croniche e certificazioni.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👁️</div>
+          <h3>Oculistica</h3>
+          <p>Visita oculistica completa, controllo della vista, patologie oculari e prescrizione lenti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ NOI -->
+  <section>
+    <div class="section-inner">
+      <h2 class="section-title">Perché scegliere PoliDoc LGA</h2>
+      <div class="divider"></div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="icon">⭐</div>
+          <h4>4,8 stelle su Google</h4>
+          <p>Valutazione eccellente dai nostri pazienti. Qualità certificata dalla soddisfazione reale.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">🏥</div>
+          <h4>Plurispecialistico</h4>
+          <p>Più specialisti sotto lo stesso tetto. Risparmi tempo e hai tutto il necessario in un'unica struttura.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">📅</div>
+          <h4>Prenotazione rapida</h4>
+          <p>Chiamaci o scrivici per fissare un appuntamento nei tempi brevi che meriti.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">📍</div>
+          <h4>Centro di Partinico</h4>
+          <p>In Via Lagrange 1, facilmente raggiungibile dalla città metropolitana di Palermo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <h2>Prenota la tua visita oggi</h2>
+    <p style="opacity:.85;margin-bottom:1.5rem;">Siamo aperti fino alle 19:00. Contattaci per un appuntamento.</p>
+    <a href="contattaci.html" class="btn">Contattaci</a>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>PoliDoc LGA</strong> — Centro Medico Polispecialistico</p>
+  <p style="margin-top:.5rem;">Via Lagrange, 1 — 90047 Partinico (PA) &nbsp;|&nbsp; <a href="tel:+390915649099">091 564 9099</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;">&copy; 2025 PoliDoc LGA. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+  // hide fallback text if logo image loads
+  document.querySelector('.logo-wrap img').addEventListener('load', function() {
+    document.getElementById('logo-fallback').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

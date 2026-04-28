@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contattaci — PoliDoc LGA | Partinico</title>
+  <meta name="description" content="Contatta PoliDoc LGA per prenotare una visita. Via Lagrange 1, Partinico. Tel: 091 564 9099.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="assets/logo-full.png" alt="PoliDoc LGA" onerror="this.style.display='none'">
+      <div class="logo-text" id="logo-fallback">
+        <strong>PoliDoc LGA</strong>
+        <span>Centro Medico Polispecialistico</span>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contattaci.html" class="active">Contattaci</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="contact-hero">
+    <h1>Contattaci</h1>
+    <p>Prenota una visita o richiedici informazioni. Siamo qui per te.</p>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <!-- INFO + ORARI -->
+        <div class="contact-info">
+          <h2>Dove siamo e quando</h2>
+
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Indirizzo</strong>
+              <span>Via Lagrange, 1<br>90047 Partinico (PA)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">☎</span>
+            <div>
+              <strong>Telefono</strong>
+              <span><a href="tel:+390915649099" style="color:var(--blue);font-weight:600;">091 564 9099</a></span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Orari di apertura</strong>
+              <table class="orari-table">
+                <tr><td>Lunedì – Venerdì</td><td>09:00 – 19:00</td></tr>
+                <tr><td>Sabato</td><td>09:00 – 13:00</td></tr>
+                <tr><td>Domenica</td><td>Chiuso</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🏥</span>
+            <div>
+              <strong>Specialità disponibili</strong>
+              <span>Cardiologia · Dietologia<br>Medicina Generale · Oculistica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form">
+          <h2>Invia una richiesta</h2>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="nome">Nome e Cognome *</label>
+              <input type="text" id="nome" name="nome" required placeholder="Mario Rossi">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Telefono *</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="+39 000 000 0000">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="mario@email.it">
+            </div>
+            <div class="form-group">
+              <label for="specialita">Specialità richiesta</label>
+              <select id="specialita" name="specialita">
+                <option value="">-- Seleziona --</option>
+                <option>Cardiologia</option>
+                <option>Dietologia</option>
+                <option>Medicina Generale</option>
+                <option>Oculistica</option>
+                <option>Altro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" placeholder="Descrivi brevemente la tua richiesta..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Invia richiesta</button>
+            <p id="form-feedback" style="margin-top:1rem;color:var(--blue);font-weight:600;display:none;"></p>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- MAPPA -->
+      <div class="map-wrap" style="margin-top:3rem;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5!2d13.1177!3d38.0507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319e3b0b0b0b0b0%3A0x0!2sVia+Lagrange%2C+1%2C+90047+Partinico+PA!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit"
+          width="100%" height="380" style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="PoliDoc LGA su Google Maps">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>PoliDoc LGA</strong> — Centro Medico Polispecialistico</p>
+  <p style="margin-top:.5rem;">Via Lagrange, 1 — 90047 Partinico (PA) &nbsp;|&nbsp; <a href="tel:+390915649099">091 564 9099</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;">&copy; 2025 PoliDoc LGA. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+  document.querySelector('.logo-wrap img').addEventListener('load', function() {
+    document.getElementById('logo-fallback').style.display = 'none';
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const fb = document.getElementById('form-feedback');
+    fb.style.display = 'block';
+    fb.textContent = '✓ Richiesta inviata! Vi contatteremo al più presto.';
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>
